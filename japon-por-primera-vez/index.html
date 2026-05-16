@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Japón por primera vez | AOI</title>
+  <meta name="description" content="Itinerario de referencia para Japón por primera vez. Salidas estacionales, grupos reducidos y acompañamiento AOI.">
+  <link rel="canonical" href="https://aoitravels.com/japon-por-primera-vez/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Japón por primera vez | AOI">
+  <meta property="og:description" content="Itinerario de referencia para una primera lectura sólida de Japón, con grupos reducidos y salidas estacionales.">
+  <meta property="og:url" content="https://aoitravels.com/japon-por-primera-vez/">
+  <style>
+    :root {
+      --ink: #1b1816;
+      --muted: #6f6258;
+      --paper: #fbf8f3;
+      --accent: #8b3f2f;
+      --line: rgba(27, 24, 22, 0.12);
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      background: var(--paper);
+    }
+
+    .aoi-primera-vez,
+    .aoi-primera-vez *,
+    .aoi-primera-vez *::before,
+    .aoi-primera-vez *::after {
+      box-sizing: border-box;
+    }
+
+    .aoi-primera-vez {
+      width: 100%;
+      max-width: 100%;
+      color: var(--ink);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.6;
+      background:
+        radial-gradient(circle at top left, rgba(139, 63, 47, 0.08), transparent 36%),
+        linear-gradient(180deg, #fffdf9 0%, var(--paper) 100%);
+      padding: 0 0 1px;
+    }
+
+    .aoi-primera-vez a {
+      color: inherit;
+    }
+
+    .aoi-primera-vez .wrap {
+      width: calc(100% - 80px);
+      margin: 0 auto;
+    }
+
+    .aoi-primera-vez .hero {
+      padding: 72px 0 32px;
+    }
+
+    .aoi-primera-vez .eyebrow {
+      display: inline-block;
+      margin-bottom: 18px;
+      padding: 7px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted) !important;
+      background: rgba(255, 255, 255, 0.72);
+    }
+
+    .aoi-primera-vez h1,
+    .aoi-primera-vez h2,
+    .aoi-primera-vez h3,
+    .aoi-primera-vez p,
+    .aoi-primera-vez ul {
+      margin: 0;
+    }
+
+    .aoi-primera-vez h1 {
+      max-width: 720px;
+      font-size: clamp(40px, 7vw, 72px);
+      line-height: 0.98;
+      letter-spacing: -0.04em;
+      color: var(--ink) !important;
+    }
+
+    .aoi-primera-vez .intro {
+      max-width: 720px;
+      margin-top: 22px;
+      font-size: 19px;
+      color: var(--muted) !important;
+    }
+
+    .aoi-primera-vez .hero-grid,
+    .aoi-primera-vez .route-grid,
+    .aoi-primera-vez .facts,
+    .aoi-primera-vez .notes {
+      display: grid;
+      gap: 20px;
+    }
+
+    .aoi-primera-vez .hero-grid {
+      grid-template-columns: 1.4fr 0.9fr;
+      margin-top: 34px;
+    }
+
+    .aoi-primera-vez .card {
+      padding: 26px;
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      background: rgba(255, 255, 255, 0.82);
+      box-shadow: 0 20px 50px rgba(27, 24, 22, 0.05);
+    }
+
+    .aoi-primera-vez .facts {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .aoi-primera-vez .fact-label {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted) !important;
+    }
+
+    .aoi-primera-vez .fact-value {
+      font-size: 24px;
+      line-height: 1.15;
+      color: var(--ink) !important;
+    }
+
+    .aoi-primera-vez .fact-copy {
+      margin-top: 8px;
+      color: var(--muted) !important;
+      font-size: 15px;
+    }
+
+    .aoi-primera-vez .section {
+      padding: 24px 0 0;
+    }
+
+    .aoi-primera-vez .section-head {
+      max-width: 700px;
+      margin-bottom: 24px;
+    }
+
+    .aoi-primera-vez .section-head h2 {
+      font-size: clamp(30px, 5vw, 46px);
+      line-height: 1.04;
+      letter-spacing: -0.03em;
+      margin-bottom: 10px;
+      color: var(--ink) !important;
+    }
+
+    .aoi-primera-vez .section-head p {
+      color: var(--muted) !important;
+      font-size: 18px;
+    }
+
+    .aoi-primera-vez .route-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .aoi-primera-vez .route-step {
+      min-height: 240px;
+    }
+
+    .aoi-primera-vez .route-step span {
+      display: inline-block;
+      margin-bottom: 16px;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted) !important;
+    }
+
+    .aoi-primera-vez .route-step h3 {
+      margin-bottom: 10px;
+      font-size: 28px;
+      line-height: 1.05;
+      color: var(--ink) !important;
+    }
+
+    .aoi-primera-vez .route-step p {
+      color: var(--muted) !important;
+      font-size: 16px;
+    }
+
+    .aoi-primera-vez .notes {
+      grid-template-columns: 1fr 1fr;
+      margin-top: 20px;
+    }
+
+    .aoi-primera-vez .notes ul {
+      margin: 14px 0 0;
+      padding-left: 18px;
+      color: var(--muted) !important;
+    }
+
+    .aoi-primera-vez .notes li + li {
+      margin-top: 8px;
+    }
+
+    .aoi-primera-vez .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 32px;
+    }
+
+    .aoi-primera-vez .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 20px;
+      border-radius: 999px;
+      border: 1px solid var(--ink);
+      text-decoration: none;
+      font-size: 14px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .aoi-primera-vez .btn-solid {
+      color: #fff !important;
+      background: var(--ink) !important;
+    }
+
+    .aoi-primera-vez .btn-ghost {
+      color: var(--ink) !important;
+      background: transparent !important;
+    }
+
+    .aoi-primera-vez .foot {
+      padding: 40px 0 64px;
+      color: var(--muted) !important;
+      font-size: 14px;
+    }
+
+    @media (max-width: 860px) {
+      .aoi-primera-vez .hero-grid,
+      .aoi-primera-vez .notes,
+      .aoi-primera-vez .route-grid,
+      .aoi-primera-vez .facts {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="aoi-primera-vez">
+    <main class="wrap">
+      <section class="hero">
+        <span class="eyebrow">Itinerario de referencia</span>
+        <h1>Japón por primera vez</h1>
+        <p class="intro">Una puerta clara y bien acompañada para quienes quieren entrar en Japón con una primera lectura sólida del país: ritmo cuidado, grupos reducidos y una selección de lugares que combinan ciudad, paisaje, tradición y tiempo estacional.</p>
+
+        <div class="hero-grid">
+          <div class="card">
+            <div class="facts">
+              <div>
+                <span class="fact-label">Formato</span>
+                <p class="fact-value">1 viaje por estación</p>
+                <p class="fact-copy">Salidas ya pautadas y pensadas para un primer encuentro con Japón.</p>
+              </div>
+              <div>
+                <span class="fact-label">Grupo</span>
+                <p class="fact-value">10 a 12 personas</p>
+                <p class="fact-copy">Escala contenida para sostener cercanía, lectura cultural y buen ritmo.</p>
+              </div>
+              <div>
+                <span class="fact-label">Lanzamiento</span>
+                <p class="fact-value">El mes que viene</p>
+                <p class="fact-copy">Todavía sin precio publicado.</p>
+              </div>
+              <div>
+                <span class="fact-label">Primera salida</span>
+                <p class="fact-value">Primavera 2027</p>
+                <p class="fact-copy">La edición inaugural abre con sakura, jardines y clima amable.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <span class="fact-label">Qué propone</span>
+            <p class="fact-value">Una primera lectura coherente del país</p>
+            <p class="fact-copy">Tokyo para entrar en la escala contemporánea, Hakone como pausa paisajística, Kyoto para el espesor cultural y Kanazawa como transición hacia un Japón más sereno y artesanal.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <h2>Recorrido base</h2>
+          <p>Este esquema toma el lenguaje de los itinerarios de referencia: suficiente detalle para entender el viaje, sin cerrar todavía cada microetapa del programa final.</p>
+        </div>
+
+        <div class="route-grid">
+          <article class="card route-step">
+            <span>01</span>
+            <h3>Tokyo</h3>
+            <p>Primer aterrizaje urbano: barrios con identidad propia, templos que conviven con la energía contemporánea y una introducción clara a códigos de convivencia, gastronomía y ritmo japonés.</p>
+          </article>
+
+          <article class="card route-step">
+            <span>02</span>
+            <h3>Hakone</h3>
+            <p>Salida breve hacia el paisaje: montaña, aguas termales, vistas abiertas y una primera experiencia de pausa que baja la velocidad del viaje sin cortar la narrativa.</p>
+          </article>
+
+          <article class="card route-step">
+            <span>03</span>
+            <h3>Kyoto</h3>
+            <p>Capas históricas, jardines, arquitectura, ritual y sensibilidad estacional. El corazón cultural del viaje y el punto donde muchas claves del país empiezan a ordenarse.</p>
+          </article>
+
+          <article class="card route-step">
+            <span>04</span>
+            <h3>Kanazawa</h3>
+            <p>Un cierre más calmo: tradición material, artesanía, barrios con escala humana y una forma distinta de mirar Japón antes del regreso.</p>
+          </article>
+        </div>
+
+        <div class="notes">
+          <div class="card">
+            <span class="fact-label">Para quién es</span>
+            <p class="fact-value">Viajeros que quieren una primera vez bien armada</p>
+            <ul>
+              <li>No es un viaje genérico ni un circuito acelerado.</li>
+              <li>Prioriza contexto, lectura cultural y equilibrio entre hitos y respiración.</li>
+              <li>Puede funcionar como primera base antes de viajes futuros más específicos.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <span class="fact-label">Estado actual</span>
+            <p class="fact-value">Pre-lanzamiento</p>
+            <ul>
+              <li>Precio no publicado por ahora.</li>
+              <li>Calendario de salidas: una por estación.</li>
+              <li>Detalle fino del programa sujeto a la edición final de cada salida.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cta-row">
+          <a class="btn btn-solid" href="/#contact">Iniciar consulta</a>
+          <a class="btn btn-ghost" href="/#itinerary">Volver a itinerarios</a>
+        </div>
+      </section>
+
+      <p class="foot">AOI trabaja este material como itinerario de referencia: una guía editorial para conversar el viaje antes de publicar la versión definitiva de cada salida.</p>
+    </main>
+  </div>
+</body>
+</html>
