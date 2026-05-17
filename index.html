@@ -1230,9 +1230,17 @@
 
     .contact-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 7rem;
+      grid-template-columns: minmax(320px, 480px) minmax(260px, 340px);
+      gap: 4rem;
       align-items: start;
+      justify-content: center;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .contact-side {
+      display: flex;
+      align-items: flex-start;
     }
 
     .contact-info .lbl {
@@ -1256,6 +1264,7 @@
       display: flex;
       flex-direction: column;
       gap: 1.4rem;
+      width: min(100%, 320px);
     }
 
     .ch {
@@ -1530,6 +1539,10 @@
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: auto;
         gap: 4px;
+      }
+
+      .exp-grid .card-over {
+        display: none;
       }
 
       .ed-grid-3 {
@@ -2285,6 +2298,8 @@
             <span class="lbl">Concierge AOI</span>
             <h2>Toda experiencia<br>comienza con<br>una pregunta</h2>
             <p>Nuestro equipo acompaña desde la primera consulta. Sin compromiso inmediato. Solo una conversación.</p>
+          </div>
+          <div class="contact-side">
             <div class="channels">
               <div class="ch">
                 <div class="chi">✉</div>
@@ -2304,46 +2319,6 @@
                 <div><span class="ch-lbl">Instagram</span><a href="https://instagram.com/aoitravels"
                     target="_blank">@aoitravels</a></div>
               </div>
-            </div>
-          </div>
-          <div>
-            <form class="cform" id="cform">
-              <div class="frow">
-                <div class="fg"><label>Nombre</label><input type="text" required></div>
-                <div class="fg"><label>Email</label><input type="email" required></div>
-              </div>
-              <div class="frow">
-                <div class="fg"><label>Tipo de experiencia</label>
-                  <select>
-                    <option value="">Seleccionar...</option>
-                    <option>Tour privado con guía</option>
-                    <option>Gastronomía</option>
-                    <option>Onsen y retiro</option>
-                    <option>Viaje sagrado</option>
-                    <option>Naturaleza y aventura</option>
-                    <option>Inmersión cultural</option>
-                    <option>Artesanía</option>
-                    <option>A medida / combinado</option>
-                  </select>
-                </div>
-                <div class="fg"><label>Temporada</label>
-                  <select>
-                    <option>Primavera 2026</option>
-                    <option>Verano 2026</option>
-                    <option>Otoño 2026</option>
-                    <option>Invierno 2026–27</option>
-                    <option>Aún no definido</option>
-                  </select>
-                </div>
-              </div>
-              <div class="fg"><label>¿Qué busca en este viaje?</label><textarea
-                  placeholder="Intereses, ritmo preferido, experiencias que le interesan..."></textarea></div>
-              <p class="fnote">Su información no se comparte con terceros. Respondemos en 24–48 horas.</p>
-              <button type="submit" class="fsub">Enviar consulta</button>
-            </form>
-            <div class="fsuccess" id="fsuccess">
-              <h4>Recibimos su consulta</h4>
-              <p>El equipo AOI estará en contacto pronto.</p>
             </div>
           </div>
         </div>
