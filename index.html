@@ -1718,7 +1718,7 @@
 
       /* seasons-grid → 1 columna en mobile */
       .seasons-grid {
-        grid-template-columns: 1fr !important;
+        grid-template-columns: 1fr 1fr !important;
       }
 
       .season-block {
@@ -2902,7 +2902,7 @@
       function applyLayout() {
         var sg = document.querySelector('.seasons-grid');
         if (!sg) return;
-        var mobile = window.innerWidth <= 768;
+        var mobile = window.innerWidth <= 480;
         sg.style.setProperty('display', 'grid', 'important');
         sg.style.setProperty('grid-template-columns', mobile ? '1fr' : '1fr 1fr', 'important');
         sg.style.setProperty('gap', '3px', 'important');
