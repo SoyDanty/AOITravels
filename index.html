@@ -2507,6 +2507,24 @@
     </section>
 
     <!-- PRICING / CADA ESTACIÓN -->
+    <style>
+      .seasons-grid{display:grid!important;grid-template-columns:1fr 1fr!important;gap:3px!important;background:#c5bdb0!important}
+      .season-block{background:#f4efe6!important;padding:2.5rem!important}
+      .season-header{display:flex!important;align-items:baseline!important;gap:1rem!important;margin-bottom:1.5rem!important;padding-bottom:1rem!important;border-bottom:1px solid #ece6d8!important}
+      .trip-card{display:flex!important;justify-content:space-between!important;align-items:center!important;gap:1rem!important;padding:1rem 0!important;border-bottom:1px solid #ece6d8!important}
+      .trip-card:last-child{border-bottom:none!important}
+      .trip-name{font-family:'Cormorant Garamond',serif!important;font-size:1.05rem!important;color:#1c1a17!important;margin-bottom:.25rem!important}
+      .trip-dates{font-size:.72rem!important;color:#8a8279!important;letter-spacing:.06em!important;text-transform:uppercase!important;margin-bottom:.25rem!important}
+      .trip-price{font-size:.8rem!important;color:#b08a5e!important}
+      .trip-action{flex-shrink:0!important}
+      .badge-soldout{display:inline-block!important;font-size:.62rem!important;letter-spacing:.12em!important;text-transform:uppercase!important;padding:.35rem .75rem!important;background:#8a8279!important;color:#f4efe6!important}
+      @media(max-width:768px){
+        .seasons-grid{grid-template-columns:1fr!important}
+        .trip-card{flex-direction:column!important;align-items:flex-start!important}
+        .trip-action{width:100%!important}
+        .trip-action .btn{width:100%!important;text-align:center!important}
+      }
+    </style>
     <section id=”pricing” class=”sec pricing-sec”>
       <div class=”sec-inner”>
         <div class=”sec-head”>
