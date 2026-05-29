@@ -1934,12 +1934,14 @@
       var pricing = document.getElementById('pricing');
       var sg = document.querySelector('.seasons-grid');
       var home = document.querySelector('.aoi-home');
-      d.innerHTML = '#pricing:'+(pricing?'YES':'NO')+'<br>'
-        +'.seasons-grid:'+(sg?'YES':'NO')+'<br>'
-        +'.aoi-home:'+(home?'YES':'NO')+'<br>'
-        +'pricing in home:'+(pricing&&home&&home.contains(pricing)?'YES':'NO')+'<br>'
-        +'pricing children:'+(pricing?pricing.querySelectorAll('div').length:'n/a')+'<br>'
-        +'all divs:'+document.querySelectorAll('div').length;
+      var sections = document.querySelectorAll('section');
+      var sIds = [];
+      for(var i=0;i<sections.length;i++) sIds.push(sections[i].id||'?');
+      d.innerHTML = 'sections('+sections.length+'):'+sIds.join(',')+' | '
+        +'#pricing:'+(pricing?'YES':'NO')+' | '
+        +'.seasons-grid:'+(sg?'YES':'NO')+' | '
+        +'scripts:'+document.querySelectorAll('script').length+' | '
+        +'styles:'+document.querySelectorAll('style').length;
     });
   </script>
   <div class="aoi-home">
