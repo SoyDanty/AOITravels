@@ -1931,16 +1931,15 @@
   <script>
     window.addEventListener('load', function() {
       var d = document.getElementById('vw-debug');
+      var pricing = document.getElementById('pricing');
       var sg = document.querySelector('.seasons-grid');
-      if (!sg) { d.textContent = 'NO .seasons-grid FOUND'; return; }
-      var cs = window.getComputedStyle(sg);
-      d.innerHTML = 'VW:'+window.innerWidth+'<br>'
-        +'display:'+cs.display+'<br>'
-        +'cols:'+cs.gridTemplateColumns+'<br>'
-        +'bg:'+cs.backgroundColor+'<br>'
-        +'w:'+sg.offsetWidth+'px<br>'
-        +'inlineDisp:'+sg.style.getPropertyValue('display')+'<br>'
-        +'inlineCols:'+sg.style.getPropertyValue('grid-template-columns');
+      var home = document.querySelector('.aoi-home');
+      d.innerHTML = '#pricing:'+(pricing?'YES':'NO')+'<br>'
+        +'.seasons-grid:'+(sg?'YES':'NO')+'<br>'
+        +'.aoi-home:'+(home?'YES':'NO')+'<br>'
+        +'pricing in home:'+(pricing&&home&&home.contains(pricing)?'YES':'NO')+'<br>'
+        +'pricing children:'+(pricing?pricing.querySelectorAll('div').length:'n/a')+'<br>'
+        +'all divs:'+document.querySelectorAll('div').length;
     });
   </script>
   <div class="aoi-home">
