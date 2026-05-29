@@ -1922,27 +1922,7 @@
       padding-top: 1.2rem;
     }
 
-    /* ─── SECTION ORDERING (flexbox reorder) ──────────────── */
-    .aoi-home {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .mob-menu   { order: 0; }
-    nav         { order: 0; }
-    #hero       { order: 1; }
-    .quote-band { order: 2; }
-    #itinerary  { order: 3; }
-    #pricing    { order: 4; }
-    #experiences { order: 5; }
-    .gallery-wrap { order: 6; }
-    #editorial  { order: 7; }
-    #tailor     { order: 8; }
-    #process    { order: 9; }
-    #testimonials { order: 10; }
-    #contact    { order: 11; }
-    .share-bar  { order: 12; }
-    footer      { order: 13; }
+    /* section ordering handled via JS */
   </style>
 </head>
 
@@ -2900,6 +2880,22 @@
         { name: 'Kyoto', lat: 35.0116, lng: 135.7681, days: 'Dias 7-9' }
       ]);
     });
+
+    // Reorder homepage sections into desired visual order
+    (function () {
+      var home = document.querySelector('.aoi-home');
+      if (!home) return;
+      var order = [
+        '#hero', '.quote-band', '#itinerary', '#pricing',
+        '#experiences', '.gallery-wrap', '#editorial',
+        '#tailor', '#process', '#testimonials', '#contact',
+        '.share-bar', 'footer'
+      ];
+      order.forEach(function (sel) {
+        var el = home.querySelector(sel);
+        if (el) home.appendChild(el);
+      });
+    })();
   </script>
 </body>
 
