@@ -2896,6 +2896,42 @@
         if (el) home.appendChild(el);
       });
     })();
+
+    // Force seasons-grid layout regardless of CSS cascade
+    (function () {
+      function applyLayout() {
+        var sg = document.querySelector('.seasons-grid');
+        if (!sg) return;
+        var mobile = window.innerWidth <= 768;
+        sg.style.setProperty('display', 'grid', 'important');
+        sg.style.setProperty('grid-template-columns', mobile ? '1fr' : '1fr 1fr', 'important');
+        sg.style.setProperty('gap', '3px', 'important');
+        sg.style.setProperty('background', '#c5bdb0', 'important');
+        var blocks = sg.querySelectorAll('.season-block');
+        for (var i = 0; i < blocks.length; i++) {
+          blocks[i].style.setProperty('background', '#f4efe6', 'important');
+          blocks[i].style.setProperty('padding', '2.5rem', 'important');
+        }
+        var cards = sg.querySelectorAll('.trip-card');
+        for (var i = 0; i < cards.length; i++) {
+          cards[i].style.setProperty('display', 'flex', 'important');
+          cards[i].style.setProperty('justify-content', 'space-between', 'important');
+          cards[i].style.setProperty('align-items', 'center', 'important');
+          cards[i].style.setProperty('gap', '1rem', 'important');
+          cards[i].style.setProperty('padding', '1rem 0', 'important');
+          if (mobile) {
+            cards[i].style.setProperty('flex-direction', 'column', 'important');
+            cards[i].style.setProperty('align-items', 'flex-start', 'important');
+          }
+        }
+      }
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', applyLayout);
+      } else {
+        applyLayout();
+      }
+      window.addEventListener('resize', applyLayout);
+    })();
   </script>
 </body>
 
