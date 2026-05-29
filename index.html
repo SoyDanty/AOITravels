@@ -1718,21 +1718,21 @@
 
       /* seasons-grid → 1 columna en mobile */
       .seasons-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
       }
 
       .season-block {
-        padding: 2rem 1.5rem;
+        padding: 2rem 1.5rem !important;
       }
 
       .trip-card {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.75rem;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 0.75rem !important;
       }
 
       .trip-action {
-        width: 100%;
+        width: 100% !important;
       }
 
       .trip-action .btn {
@@ -2507,57 +2507,39 @@
     </section>
 
     <!-- PRICING / CADA ESTACIÓN -->
-    <style>
-      .seasons-grid{display:grid!important;grid-template-columns:1fr 1fr!important;gap:3px!important;background:#c5bdb0!important}
-      .season-block{background:#f4efe6!important;padding:2.5rem!important}
-      .season-header{display:flex!important;align-items:baseline!important;gap:1rem!important;margin-bottom:1.5rem!important;padding-bottom:1rem!important;border-bottom:1px solid #ece6d8!important}
-      .trip-card{display:flex!important;justify-content:space-between!important;align-items:center!important;gap:1rem!important;padding:1rem 0!important;border-bottom:1px solid #ece6d8!important}
-      .trip-card:last-child{border-bottom:none!important}
-      .trip-name{font-family:'Cormorant Garamond',serif!important;font-size:1.05rem!important;color:#1c1a17!important;margin-bottom:.25rem!important}
-      .trip-dates{font-size:.72rem!important;color:#8a8279!important;letter-spacing:.06em!important;text-transform:uppercase!important;margin-bottom:.25rem!important}
-      .trip-price{font-size:.8rem!important;color:#b08a5e!important}
-      .trip-action{flex-shrink:0!important}
-      .badge-soldout{display:inline-block!important;font-size:.62rem!important;letter-spacing:.12em!important;text-transform:uppercase!important;padding:.35rem .75rem!important;background:#8a8279!important;color:#f4efe6!important}
-      @media(max-width:768px){
-        .seasons-grid{grid-template-columns:1fr!important}
-        .trip-card{flex-direction:column!important;align-items:flex-start!important}
-        .trip-action{width:100%!important}
-        .trip-action .btn{width:100%!important;text-align:center!important}
-      }
-    </style>
     <section id=”pricing” class=”sec pricing-sec”>
       <div class=”sec-inner”>
         <div class=”sec-head”>
           <span class=”lbl”>Calendario de salidas</span>
-          <h2 style=”color:#1c1a17 !important;”>Cada estación,<br>otro Japón</h2>
-          <p style=”color:#8a8279 !important;”>La planificación precisa determina si la experiencia es aproximada o auténtica.</p>
+          <h2 style=”color:#1c1a17;”>Cada estación,<br>otro Japón</h2>
+          <p style=”color:#8a8279;”>La planificación precisa determina si la experiencia es aproximada o auténtica.</p>
         </div>
-        <div class=”seasons-grid”>
+        <div class=”seasons-grid” style=”display:grid;grid-template-columns:1fr 1fr;gap:3px;background:#c5bdb0;”>
 
           <!-- VERANO -->
-          <div class=”season-block”>
-            <div class=”season-header”>
+          <div class=”season-block” style=”background:#f4efe6;padding:2.5rem;”>
+            <div class=”season-header” style=”display:flex;align-items:baseline;gap:1rem;margin-bottom:1.5rem;padding-bottom:1rem;border-bottom:1px solid #ece6d8;”>
               <span class=”lbl season-lbl”>Verano</span>
-              <span class=”season-desc”>Junio — Agosto</span>
+              <span class=”season-desc” style=”font-size:.75rem;color:#8a8279;”>Junio — Agosto</span>
             </div>
-            <div class=”trip-list”>
-              <div class=”trip-card trip-soldout”>
+            <div class=”trip-list” style=”display:flex;flex-direction:column;”>
+              <div class=”trip-card trip-soldout” style=”display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1rem 0;border-bottom:1px solid #ece6d8;”>
                 <div class=”trip-info”>
-                  <div class=”trip-name”>Japón por Primera Vez</div>
-                  <div class=”trip-dates”>10 al 20 de julio 2026</div>
-                  <div class=”trip-price”>$XXXX / persona</div>
+                  <div class=”trip-name” style=”font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:#1c1a17;margin-bottom:.25rem;”>Japón por Primera Vez</div>
+                  <div class=”trip-dates” style=”font-size:.72rem;color:#8a8279;letter-spacing:.06em;text-transform:uppercase;margin-bottom:.25rem;”>10 al 20 de julio 2026</div>
+                  <div class=”trip-price” style=”font-size:.8rem;color:#b08a5e;”>$XXXX / persona</div>
                 </div>
-                <div class=”trip-action”>
-                  <span class=”trip-badge badge-soldout”>AGOTADO</span>
+                <div class=”trip-action” style=”flex-shrink:0;”>
+                  <span class=”trip-badge badge-soldout” style=”display:inline-block;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;padding:.35rem .75rem;background:#8a8279;color:#f4efe6;”>AGOTADO</span>
                 </div>
               </div>
-              <div class=”trip-card”>
+              <div class=”trip-card” style=”display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1rem 0;”>
                 <div class=”trip-info”>
-                  <div class=”trip-name”>Hiking Signature Journey</div>
-                  <div class=”trip-dates”>julio / agosto 2027</div>
-                  <div class=”trip-price”>$XXXX / persona</div>
+                  <div class=”trip-name” style=”font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:#1c1a17;margin-bottom:.25rem;”>Hiking Signature Journey</div>
+                  <div class=”trip-dates” style=”font-size:.72rem;color:#8a8279;letter-spacing:.06em;text-transform:uppercase;margin-bottom:.25rem;”>julio / agosto 2027</div>
+                  <div class=”trip-price” style=”font-size:.8rem;color:#b08a5e;”>$XXXX / persona</div>
                 </div>
-                <div class=”trip-action”>
+                <div class=”trip-action” style=”flex-shrink:0;”>
                   <a href=”#contact” class=”btn btn-ghost-dark”>+ info</a>
                 </div>
               </div>
@@ -2565,29 +2547,29 @@
           </div>
 
           <!-- OTOÑO -->
-          <div class=”season-block”>
-            <div class=”season-header”>
+          <div class=”season-block” style=”background:#f4efe6;padding:2.5rem;”>
+            <div class=”season-header” style=”display:flex;align-items:baseline;gap:1rem;margin-bottom:1.5rem;padding-bottom:1rem;border-bottom:1px solid #ece6d8;”>
               <span class=”lbl season-lbl”>Otoño</span>
-              <span class=”season-desc”>Septiembre — Noviembre</span>
+              <span class=”season-desc” style=”font-size:.75rem;color:#8a8279;”>Septiembre — Noviembre</span>
             </div>
-            <div class=”trip-list”>
-              <div class=”trip-card”>
+            <div class=”trip-list” style=”display:flex;flex-direction:column;”>
+              <div class=”trip-card” style=”display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1rem 0;border-bottom:1px solid #ece6d8;”>
                 <div class=”trip-info”>
-                  <div class=”trip-name”>Golf Signature Journey</div>
-                  <div class=”trip-dates”>18 al 28 de septiembre 2026</div>
-                  <div class=”trip-price”>$XXXX / persona</div>
+                  <div class=”trip-name” style=”font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:#1c1a17;margin-bottom:.25rem;”>Golf Signature Journey</div>
+                  <div class=”trip-dates” style=”font-size:.72rem;color:#8a8279;letter-spacing:.06em;text-transform:uppercase;margin-bottom:.25rem;”>18 al 28 de septiembre 2026</div>
+                  <div class=”trip-price” style=”font-size:.8rem;color:#b08a5e;”>$XXXX / persona</div>
                 </div>
-                <div class=”trip-action”>
+                <div class=”trip-action” style=”flex-shrink:0;”>
                   <a href=”#contact” class=”btn btn-ghost-dark”>+ info</a>
                 </div>
               </div>
-              <div class=”trip-card”>
+              <div class=”trip-card” style=”display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1rem 0;”>
                 <div class=”trip-info”>
-                  <div class=”trip-name”>Japón por Primera Vez</div>
-                  <div class=”trip-dates”>19 al 29 de noviembre 2026</div>
-                  <div class=”trip-price”>$XXXX / persona</div>
+                  <div class=”trip-name” style=”font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:#1c1a17;margin-bottom:.25rem;”>Japón por Primera Vez</div>
+                  <div class=”trip-dates” style=”font-size:.72rem;color:#8a8279;letter-spacing:.06em;text-transform:uppercase;margin-bottom:.25rem;”>19 al 29 de noviembre 2026</div>
+                  <div class=”trip-price” style=”font-size:.8rem;color:#b08a5e;”>$XXXX / persona</div>
                 </div>
-                <div class=”trip-action”>
+                <div class=”trip-action” style=”flex-shrink:0;”>
                   <a href=”#contact” class=”btn btn-ghost-dark”>+ info</a>
                 </div>
               </div>
@@ -2595,29 +2577,29 @@
           </div>
 
           <!-- INVIERNO -->
-          <div class=”season-block”>
-            <div class=”season-header”>
+          <div class=”season-block” style=”background:#f4efe6;padding:2.5rem;”>
+            <div class=”season-header” style=”display:flex;align-items:baseline;gap:1rem;margin-bottom:1.5rem;padding-bottom:1rem;border-bottom:1px solid #ece6d8;”>
               <span class=”lbl season-lbl”>Invierno</span>
-              <span class=”season-desc”>Diciembre — Febrero</span>
+              <span class=”season-desc” style=”font-size:.75rem;color:#8a8279;”>Diciembre — Febrero</span>
             </div>
-            <div class=”trip-list”>
-              <div class=”trip-card”>
+            <div class=”trip-list” style=”display:flex;flex-direction:column;”>
+              <div class=”trip-card” style=”display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1rem 0;border-bottom:1px solid #ece6d8;”>
                 <div class=”trip-info”>
-                  <div class=”trip-name”>Japón por Primera Vez</div>
-                  <div class=”trip-dates”>15 al 25 de enero 2027</div>
-                  <div class=”trip-price”>$XXXX / persona</div>
+                  <div class=”trip-name” style=”font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:#1c1a17;margin-bottom:.25rem;”>Japón por Primera Vez</div>
+                  <div class=”trip-dates” style=”font-size:.72rem;color:#8a8279;letter-spacing:.06em;text-transform:uppercase;margin-bottom:.25rem;”>15 al 25 de enero 2027</div>
+                  <div class=”trip-price” style=”font-size:.8rem;color:#b08a5e;”>$XXXX / persona</div>
                 </div>
-                <div class=”trip-action”>
+                <div class=”trip-action” style=”flex-shrink:0;”>
                   <a href=”#contact” class=”btn btn-ghost-dark”>+ info</a>
                 </div>
               </div>
-              <div class=”trip-card”>
+              <div class=”trip-card” style=”display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1rem 0;”>
                 <div class=”trip-info”>
-                  <div class=”trip-name”>Japón por Primera Vez + Ski (opcional)</div>
-                  <div class=”trip-dates”>15 al 30 de enero 2027</div>
-                  <div class=”trip-price”>$XXXX / persona</div>
+                  <div class=”trip-name” style=”font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:#1c1a17;margin-bottom:.25rem;”>Japón por Primera Vez + Ski (opcional)</div>
+                  <div class=”trip-dates” style=”font-size:.72rem;color:#8a8279;letter-spacing:.06em;text-transform:uppercase;margin-bottom:.25rem;”>15 al 30 de enero 2027</div>
+                  <div class=”trip-price” style=”font-size:.8rem;color:#b08a5e;”>$XXXX / persona</div>
                 </div>
-                <div class=”trip-action”>
+                <div class=”trip-action” style=”flex-shrink:0;”>
                   <a href=”#contact” class=”btn btn-ghost-dark”>+ info</a>
                 </div>
               </div>
@@ -2625,39 +2607,39 @@
           </div>
 
           <!-- PRIMAVERA -->
-          <div class=”season-block”>
-            <div class=”season-header”>
+          <div class=”season-block” style=”background:#f4efe6;padding:2.5rem;”>
+            <div class=”season-header” style=”display:flex;align-items:baseline;gap:1rem;margin-bottom:1.5rem;padding-bottom:1rem;border-bottom:1px solid #ece6d8;”>
               <span class=”lbl season-lbl”>Primavera</span>
-              <span class=”season-desc”>Marzo — Mayo</span>
+              <span class=”season-desc” style=”font-size:.75rem;color:#8a8279;”>Marzo — Mayo</span>
             </div>
-            <div class=”trip-list”>
-              <div class=”trip-card”>
+            <div class=”trip-list” style=”display:flex;flex-direction:column;”>
+              <div class=”trip-card” style=”display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1rem 0;border-bottom:1px solid #ece6d8;”>
                 <div class=”trip-info”>
-                  <div class=”trip-name”>Japón por Primera Vez</div>
-                  <div class=”trip-dates”>25 de marzo al 5 de abril 2027</div>
-                  <div class=”trip-price”>$XXXX / persona</div>
+                  <div class=”trip-name” style=”font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:#1c1a17;margin-bottom:.25rem;”>Japón por Primera Vez</div>
+                  <div class=”trip-dates” style=”font-size:.72rem;color:#8a8279;letter-spacing:.06em;text-transform:uppercase;margin-bottom:.25rem;”>25 de marzo al 5 de abril 2027</div>
+                  <div class=”trip-price” style=”font-size:.8rem;color:#b08a5e;”>$XXXX / persona</div>
                 </div>
-                <div class=”trip-action”>
+                <div class=”trip-action” style=”flex-shrink:0;”>
                   <a href=”#contact” class=”btn btn-ghost-dark”>+ info</a>
                 </div>
               </div>
-              <div class=”trip-card”>
+              <div class=”trip-card” style=”display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1rem 0;border-bottom:1px solid #ece6d8;”>
                 <div class=”trip-info”>
-                  <div class=”trip-name”>Golf Signature Journey</div>
-                  <div class=”trip-dates”>mayo / junio 2027</div>
-                  <div class=”trip-price”>$XXXX / persona</div>
+                  <div class=”trip-name” style=”font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:#1c1a17;margin-bottom:.25rem;”>Golf Signature Journey</div>
+                  <div class=”trip-dates” style=”font-size:.72rem;color:#8a8279;letter-spacing:.06em;text-transform:uppercase;margin-bottom:.25rem;”>mayo / junio 2027</div>
+                  <div class=”trip-price” style=”font-size:.8rem;color:#b08a5e;”>$XXXX / persona</div>
                 </div>
-                <div class=”trip-action”>
+                <div class=”trip-action” style=”flex-shrink:0;”>
                   <a href=”#contact” class=”btn btn-ghost-dark”>+ info</a>
                 </div>
               </div>
-              <div class=”trip-card”>
+              <div class=”trip-card” style=”display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1rem 0;”>
                 <div class=”trip-info”>
-                  <div class=”trip-name”>Bike Signature Journey</div>
-                  <div class=”trip-dates”>mayo / junio 2027</div>
-                  <div class=”trip-price”>$XXXX / persona</div>
+                  <div class=”trip-name” style=”font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:#1c1a17;margin-bottom:.25rem;”>Bike Signature Journey</div>
+                  <div class=”trip-dates” style=”font-size:.72rem;color:#8a8279;letter-spacing:.06em;text-transform:uppercase;margin-bottom:.25rem;”>mayo / junio 2027</div>
+                  <div class=”trip-price” style=”font-size:.8rem;color:#b08a5e;”>$XXXX / persona</div>
                 </div>
-                <div class=”trip-action”>
+                <div class=”trip-action” style=”flex-shrink:0;”>
                   <a href=”#contact” class=”btn btn-ghost-dark”>+ info</a>
                 </div>
               </div>
