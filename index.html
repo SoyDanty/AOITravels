@@ -1927,23 +1927,6 @@
 </head>
 
 <body>
-  <div id="vw-debug" style="position:fixed;bottom:10px;right:10px;z-index:9999;background:red;color:white;padding:6px 10px;font-size:11px;font-family:monospace;max-width:320px;line-height:1.5;"></div>
-  <script>
-    window.addEventListener('load', function() {
-      var d = document.getElementById('vw-debug');
-      var pricing = document.getElementById('pricing');
-      var sg = document.querySelector('.seasons-grid');
-      var home = document.querySelector('.aoi-home');
-      var sections = document.querySelectorAll('section');
-      var sIds = [];
-      for(var i=0;i<sections.length;i++) sIds.push(sections[i].id||'?');
-      d.innerHTML = 'sections('+sections.length+'):'+sIds.join(',')+' | '
-        +'#pricing:'+(pricing?'YES':'NO')+' | '
-        +'.seasons-grid:'+(sg?'YES':'NO')+' | '
-        +'scripts:'+document.querySelectorAll('script').length+' | '
-        +'styles:'+document.querySelectorAll('style').length;
-    });
-  </script>
   <div class="aoi-home">
 
     <!-- MOBILE MENU -->
