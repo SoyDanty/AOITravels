@@ -1681,7 +1681,268 @@
       .quote-band {
         padding: 3rem 1.5rem;
       }
+
+      /* Itinerary tabs → scroll horizontal en mobile */
+      .itin-tabs {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        white-space: nowrap;
+        padding-bottom: 0.25rem;
+        gap: 0;
+      }
+
+      .itab {
+        flex-shrink: 0;
+      }
+
+      /* ip1: descripción de destinos más compacta */
+      .itin-meta {
+        gap: 1rem;
+      }
+
+      /* sig-grid → stack vertical en mobile */
+      .sig-item {
+        grid-template-columns: 1fr;
+        min-height: auto;
+      }
+
+      .sig-img {
+        min-height: 220px;
+        order: 0 !important;
+      }
+
+      .sig-body {
+        order: 1 !important;
+        padding: 2rem 1.5rem;
+      }
+
+      /* seasons-grid → 1 columna en mobile */
+      .seasons-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .season-block {
+        padding: 2rem 1.5rem;
+      }
+
+      .trip-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+      }
+
+      .trip-action {
+        width: 100%;
+      }
+
+      .trip-action .btn {
+        width: 100%;
+        text-align: center;
+      }
+
+      /* ip4 pills → wrap en mobile */
+      .pillars {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .ip4-proc {
+        grid-template-columns: 1fr;
+      }
+
+      /* pricing sec inner */
+      .pricing-sec .sec-inner {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      .season-block:not(:last-child) {
+        border-bottom: 3px solid var(--stone);
+      }
     }
+
+    /* ─── SIG-GRID: Disciplina y Paisajes ─────────────────── */
+    .sig-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .sig-item {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 360px;
+      border-bottom: 1px solid var(--stone);
+    }
+
+    .sig-item:last-child {
+      border-bottom: none;
+    }
+
+    .sig-item:nth-child(even) .sig-img {
+      order: 1;
+    }
+
+    .sig-item:nth-child(even) .sig-body {
+      order: 0;
+    }
+
+    .sig-img {
+      background-size: cover;
+      background-position: center;
+      min-height: 300px;
+    }
+
+    .sig-body {
+      padding: 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .sig-body h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem;
+      font-weight: 300;
+      color: var(--ink);
+      line-height: 1.3;
+    }
+
+    .sig-body p {
+      color: var(--ash);
+      font-size: 0.85rem;
+      line-height: 1.8;
+      max-width: 440px;
+    }
+
+    /* ─── SEASONS-GRID: Cada estación ─────────────────────── */
+    .seasons-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3px;
+      background: var(--stone);
+      border: 1px solid var(--stone);
+    }
+
+    .season-block {
+      background: var(--paper);
+      padding: 2.5rem;
+    }
+
+    .season-header {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--cream);
+    }
+
+    .season-lbl {
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+    }
+
+    .season-desc {
+      font-size: 0.75rem;
+      color: var(--ash);
+      font-family: 'Josefin Sans', sans-serif;
+    }
+
+    .trip-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    .trip-card {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--cream);
+    }
+
+    .trip-card:last-child {
+      border-bottom: none;
+    }
+
+    .trip-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.05rem;
+      font-weight: 400;
+      color: var(--ink);
+      margin-bottom: 0.25rem;
+    }
+
+    .trip-dates {
+      font-size: 0.72rem;
+      color: var(--ash);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 0.25rem;
+    }
+
+    .trip-price {
+      font-size: 0.8rem;
+      color: var(--gold);
+      font-family: 'Josefin Sans', sans-serif;
+      letter-spacing: 0.05em;
+    }
+
+    .trip-action {
+      flex-shrink: 0;
+    }
+
+    .trip-badge {
+      display: inline-block;
+      font-size: 0.62rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.35rem 0.75rem;
+      border-radius: 0;
+      font-family: 'Josefin Sans', sans-serif;
+    }
+
+    .badge-soldout {
+      background: var(--ash);
+      color: var(--paper);
+    }
+
+    /* ─── IP4 proc override ────────────────────────────────── */
+    .ip4-proc {
+      background: transparent;
+      padding: 0;
+    }
+
+    .ip4-proc .pstep {
+      border-top: 1px solid var(--cream);
+      padding-top: 1.2rem;
+    }
+
+    /* ─── SECTION ORDERING (flexbox reorder) ──────────────── */
+    .aoi-home {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .mob-menu   { order: 0; }
+    nav         { order: 0; }
+    #hero       { order: 1; }
+    .quote-band { order: 2; }
+    #itinerary  { order: 3; }
+    #pricing    { order: 4; }
+    #experiences { order: 5; }
+    .gallery-wrap { order: 6; }
+    #editorial  { order: 7; }
+    #tailor     { order: 8; }
+    #process    { order: 9; }
+    #testimonials { order: 10; }
+    #contact    { order: 11; }
+    .share-bar  { order: 12; }
+    footer      { order: 13; }
   </style>
 </head>
 
@@ -1720,13 +1981,8 @@
       <div class="hero-bg"></div>
       <div class="hero-body">
         <p class="hero-eyebrow">AOI Signature Journeys · Japón</p>
-        <h1>Precisión<br><em>silenciosa</em></h1>
-        <p class="hero-sub">Japón no se visita. Se habita durante un tiempo. Cada itinerario que diseñamos parte de esa
-          comprensión.</p>
-        <div class="btns">
-          <a href="#experiences" class="btn btn-solid">Explorar experiencias</a>
-          <a href="#contact" class="btn btn-ghost">Iniciar consulta</a>
-        </div>
+        <h1>Japón no se visita.<br><em>Se habita durante un tiempo.</em></h1>
+        <p class="hero-sub">Cada itinerario que diseñamos parte de esa comprensión: viajes privados y experiencias culturales, diseñados a medida.</p>
       </div>
       <div class="hero-scroll" aria-hidden="true">Desplazar</div>
     </section>
@@ -1899,13 +2155,13 @@
     <section id="itinerary" class="sec itin-sec">
       <div class="sec-inner">
         <div class="sec-head">
-          <span class="lbl">Itinerarios de referencia</span>
-          <h2>Dos formas de entrar<br>en Japón</h2>
+          <span class="lbl">Modos de viaje</span>
+          <h2>Formas de explorar<br>Japón con AOI</h2>
         </div>
         <div class="itin-tabs" id="itinTabs">
           <button class="itab on" onclick="showPanel('ip1',this)">Japón por primera vez</button>
           <button class="itab" onclick="showPanel('ip2',this)">Japón oculto</button>
-          <button class="itab" onclick="showPanel('ip3',this)">Experiencias integrables</button>
+          <button class="itab" onclick="showPanel('ip3',this)">Disciplina y Paisajes</button>
           <button class="itab" onclick="showPanel('ip4',this)">A medida</button>
         </div>
 
@@ -1917,66 +2173,76 @@
                 <div class="u">Viaje por estación</div>
               </div>
               <div class="istat">
-                <div class="v">4</div>
+                <div class="v">6</div>
                 <div class="u">Destinos</div>
               </div>
               <div class="istat">
-                <div class="v">10–12</div>
+                <div class="v">8</div>
                 <div class="u">Personas</div>
               </div>
             </div>
-            <p class="itin-desc">Tokio · Hakone · Kyoto · Kanazawa. Un recorrido pautado para quienes quieren conocer
-              Japón por primera vez con acompañamiento, contexto y un ritmo cuidado.</p>
+            <p class="itin-desc">Tokyo · Fuji · Kyoto · Kōya-san · Himeji · Hiroshima · Osaka. Un recorrido diseñado para quienes visitan Japón por primera vez — con acompañamiento, contexto y un ritmo cuidado de principio a fin.</p>
             <div class="idays">
               <div class="iday" onclick="toggleDay(this)">
-                <span class="dnum">01</span>
+                <span class="dnum">Tokyo</span>
                 <div>
-                  <div class="dtitle">Primera salida: Primavera 2027</div>
-                  <div class="dsub">Lanzamiento previsto para el mes que viene</div>
-                  <div class="ddetail">La propuesta se abrirá por estaciones, con un viaje por estación y grupos
-                    reducidos de 10 a 12 personas.</div>
+                  <div class="dtitle">La capital en capas: tradición, diseño y gastronomía en una misma calle</div>
+                  <div class="dsub">Cuatro días</div>
+                  <div class="ddetail">Cuatro días para descubrir una ciudad que nunca se repite — callejones que el mapa no muestra, arquitectura que desafía lo posible y una cultura gastronómica que se revela en cada esquina, desde el mostrador de ocho asientos hasta la alta cocina.</div>
                 </div>
               </div>
               <div class="iday" onclick="toggleDay(this)">
-                <span class="dnum">Tokio</span>
+                <span class="dnum">Fuji</span>
                 <div>
-                  <div class="dtitle">Puerta de entrada al Japón contemporáneo</div>
-                  <div class="dsub">Barrios clave · primeras referencias culturales</div>
-                  <div class="ddetail">Una introducción clara a la vida urbana japonesa para ubicar al viajero antes de
-                    profundizar.</div>
-                </div>
-              </div>
-              <div class="iday" onclick="toggleDay(this)">
-                <span class="dnum">Hakone</span>
-                <div>
-                  <div class="dtitle">Naturaleza, pausa y paisaje</div>
-                  <div class="dsub">Onsen · ryokan · cambio de ritmo</div>
-                  <div class="ddetail">Un tramo pensado para bajar el ritmo y leer otra escala de Japón desde la
-                    geografía.</div>
+                  <div class="dtitle">La montaña sagrada, sin intermediarios</div>
+                  <div class="dsub">Una noche</div>
+                  <div class="ddetail">Una noche al pie del volcán más icónico de Japón. Ryokan con onsen, el lago como espejo y el Fuji dominando cada ventana — la imagen que define el viaje, vivida en silencio y sin apuro.</div>
                 </div>
               </div>
               <div class="iday" onclick="toggleDay(this)">
                 <span class="dnum">Kyoto</span>
                 <div>
-                  <div class="dtitle">La base clásica</div>
-                  <div class="dsub">Templos · jardines · barrios históricos</div>
-                  <div class="ddetail">Incluye hitos esenciales para una primera visita, sin convertir el viaje en un
-                    checklist automático.</div>
+                  <div class="dtitle">Templos, jardines y el ritmo silencioso de la antigua capital</div>
+                  <div class="dsub">Tres días</div>
+                  <div class="ddetail">Tres días para entrar en la ciudad que inventó la elegancia japonesa. Caminos que se vacían a la hora justa, jardines diseñados para contemplar el tiempo y encuentros culturales que sólo ocurren cuando alguien local abre la puerta.</div>
                 </div>
               </div>
               <div class="iday" onclick="toggleDay(this)">
-                <span class="dnum">Kanazawa</span>
+                <span class="dnum">Kōya-san</span>
                 <div>
-                  <div class="dtitle">Cierre con artesanía y escala humana</div>
-                  <div class="dsub">Patrimonio vivo · otra velocidad</div>
-                  <div class="ddetail">El final suma una lectura más fina del país, conectando tradición, regiones y
-                    oficios.</div>
+                  <div class="dtitle">Una noche entre monjes, cedros centenarios y silencio absoluto</div>
+                  <div class="dsub">El momento que no esperabas</div>
+                  <div class="ddetail">Dormir en un templo budista en la cima de una montaña sagrada, caminar senderos milenarios antes de que amanezca. Japón en su forma más profunda.</div>
+                </div>
+              </div>
+              <div class="iday" onclick="toggleDay(this)">
+                <span class="dnum">Himeji</span>
+                <div>
+                  <div class="dtitle">El castillo samurai más imponente de Japón, en el camino hacia el sur</div>
+                  <div class="dsub">Media mañana</div>
+                  <div class="ddetail">Una fortaleza blanca suspendida sobre la ciudad, perfecta e intacta desde el siglo XVII. Media mañana basta para entender por qué es el castillo más célebre del país.</div>
+                </div>
+              </div>
+              <div class="iday" onclick="toggleDay(this)">
+                <span class="dnum">Hiroshima</span>
+                <div>
+                  <div class="dtitle">Memoria, resiliencia y la belleza sagrada de Miyajima</div>
+                  <div class="dsub">Un día</div>
+                  <div class="ddetail">Una ciudad que transformó su historia en mensaje de paz, y a pocos minutos, una isla donde un torii bermellón flota sobre el mar y el tiempo parece detenerse entre templos y bosque.</div>
+                </div>
+              </div>
+              <div class="iday" onclick="toggleDay(this)">
+                <span class="dnum">Osaka</span>
+                <div>
+                  <div class="dtitle">Energía, street food y el cierre más vivo del viaje</div>
+                  <div class="dsub">El antídoto perfecto para tanta contemplación</div>
+                  <div class="ddetail">Osaka es ruidosa, generosa y descaradamente deliciosa — el lugar donde Japón se suelta, y donde el viaje termina con la mejor cena de despedida.</div>
                 </div>
               </div>
             </div>
             <div style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;">
               <a href="/japon-por-primera-vez/" class="btn btn-solid">Ver itinerario completo</a>
-              <a href="#contact" class="btn btn-ghost-dark">Consultar esta salida</a>
+              <a href="#pricing" class="btn btn-ghost-dark">+ info por temporada</a>
             </div>
           </div>
           <div class="map-box" id="map1" style="min-height:420px;"></div>
@@ -2031,79 +2297,87 @@
             </div>
             <div style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;">
               <a href="/experiencias#acceso-oculto" class="btn btn-solid">Explorar esta línea</a>
-              <a href="#contact" class="btn btn-ghost-dark">Diseñar una versión propia</a>
+              <a href="#contact" class="btn btn-ghost-dark">Diseñá tu viaje</a>
             </div>
           </div>
           <div class="map-box" id="map2" style="min-height:420px;"></div>
         </div>
 
         <div class="ipanel" id="ip3" style="display:none;">
-          <div>
-            <div class="itin-meta">
-              <div class="istat">
-                <div class="v">1–3</div>
-                <div class="u">Días</div>
-              </div>
-              <div class="istat">
-                <div class="v">+1</div>
-                <div class="u">Viaje completo</div>
-              </div>
-              <div class="istat">
-                <div class="v">Flexible</div>
-                <div class="u">Integración</div>
+          <div class="sig-grid" style="grid-column:1/-1;">
+            <div class="sig-item">
+              <div class="sig-img" style="background-image:url('https://d1vqr0cheeo2qs.cloudfront.net/articles/title_images/000/039/957/original/DSCF0572.jpg');"></div>
+              <div class="sig-body">
+                <span class="lbl">Golf</span>
+                <h3>Golf Signature Journeys</h3>
+                <p>Viajes que combinan campos de primer nivel con inmersión cultural profunda — golf, paisaje, gastronomía y hospitalidad japonesa en una sola experiencia. Alojamiento premium, traslados privados, coordinación completa del golf y acompañamiento cultural en cada región.</p>
+                <a href="#pricing" class="btn btn-ghost-dark">Ver salidas disponibles</a>
               </div>
             </div>
-            <p class="itin-desc">Las experiencias también pueden funcionar como capas dentro de un viaje mayor: un día,
-              dos, tres o una ruta completa sobre un concepto puntual.</p>
-            <div class="idays">
-              <div class="iday" onclick="toggleDay(this)">
-                <span class="dnum">01</span>
-                <div>
-                  <div class="dtitle">Guías aisladas</div>
-                  <div class="dsub">Un barrio, una ciudad, una mirada especializada</div>
-                  <div class="ddetail">Ideal para sumar contexto puntual sin reformular por completo el viaje.</div>
-                </div>
-              </div>
-              <div class="iday" onclick="toggleDay(this)">
-                <span class="dnum">02–03</span>
-                <div>
-                  <div class="dtitle">Módulos temáticos</div>
-                  <div class="dsub">Gastronomía · espiritualidad · artesanía · naturaleza</div>
-                  <div class="ddetail">Bloques cortos para armar el viaje con experiencias precisas y bien integradas.
-                  </div>
-                </div>
-              </div>
-              <div class="iday" onclick="toggleDay(this)">
-                <span class="dnum">Full</span>
-                <div>
-                  <div class="dtitle">Un viaje entero sobre un concepto</div>
-                  <div class="dsub">Una idea curatorial desarrollada de punta a punta</div>
-                  <div class="ddetail">La misma lógica puede escalarse para diseñar una experiencia completa alrededor
-                    de un eje.</div>
-                </div>
+            <div class="sig-item">
+              <div class="sig-img" style="background-image:url('https://images.pexels.com/photos/1119796/pexels-photo-1119796.jpeg?auto=compress&cs=tinysrgb&w=1200');"></div>
+              <div class="sig-body">
+                <span class="lbl">Bicicleta</span>
+                <h3>Bike Signature Journeys</h3>
+                <p>Rutas privadas y travesías de montaña en bicicleta — desde los canales de la ciudad hasta los caminos sagrados de cedro de Kyoto. Bicicletas premium, guías locales especializados, almuerzos en ubicaciones únicas y coordinación completa de cada jornada — para que la experiencia simplemente fluya.</p>
+                <a href="#pricing" class="btn btn-ghost-dark">Ver salidas disponibles</a>
               </div>
             </div>
-            <div style="margin-top:2rem;">
-              <a href="/experiencias" class="btn btn-solid">Ver experiencias</a>
+            <div class="sig-item">
+              <div class="sig-img" style="background-image:url('https://cdn.visitgifu.com/wp/2024/09/e4f6a455-1.jpg');"></div>
+              <div class="sig-body">
+                <span class="lbl">Montaña</span>
+                <h3>Hiking Signature Journeys</h3>
+                <p>Travesías privadas por los Alpes japoneses y senderos de montaña que pocos conocen — desde caminatas de un día hasta rutas de alta montaña con refugio. Guías locales especializados, logística completa y alojamiento en lodges y ryokans de montaña.</p>
+                <a href="#pricing" class="btn btn-ghost-dark">Ver salidas disponibles</a>
+              </div>
             </div>
           </div>
-          <div class="map-box" id="map3" style="min-height:420px;"></div>
         </div>
 
         <div class="ipanel" id="ip4" style="display:none;">
           <div style="padding:3rem 0;">
             <span class="lbl" style="display:block;margin-bottom:1rem;">Diseño personalizado</span>
-            <h2 style="margin-bottom:1.5rem;color:#1c1a17 !important;">Cada viaje comienza<br>con una conversación</h2>
-            <p style="color:var(--ash);max-width:380px;margin-bottom:2.5rem;">No partimos de plantillas. También podemos
-              pensar el viaje por regiones y geografías concretas: ciudades, Alpes, interior rural, costa o Japón
-              espiritual.</p>
-            <a href="#contact" class="btn btn-solid">Iniciar el diseño</a>
+            <h2 style="margin-bottom:1.5rem;color:#1c1a17 !important;">Su viaje comienza<br>donde acaban<br>los itinerarios</h2>
+            <p style="color:var(--ash);max-width:500px;margin-bottom:2rem;">Diseñamos cada recorrido desde cero. Ningún detalle es aleatorio. Ninguna jornada es genérica. También podemos pensar el viaje por regiones y geografías concretas: ciudades, Alpes, interior rural, costa o Japón espiritual.</p>
+            <div class="pillars" style="margin-bottom:2.5rem;">
+              <div class="pill">Ritmo adaptado a su forma de viajar</div>
+              <div class="pill">Selección de alojamiento con carácter</div>
+              <div class="pill">Accesos gestionados con tiempo y relaciones</div>
+              <div class="pill">Continuidad narrativa de principio a fin</div>
+              <div class="pill">Asistencia discreta antes y durante</div>
+            </div>
+            <div class="proc-grid ip4-proc" style="margin-bottom:2.5rem;">
+              <div class="pstep">
+                <div class="pnum">01</div>
+                <h4>Consulta inicial</h4>
+                <p>Una conversación sin compromiso para entender intereses, fechas y expectativas.</p>
+              </div>
+              <div class="pstep">
+                <div class="pnum">02</div>
+                <h4>Diseño del itinerario</h4>
+                <p>Propuesta estructurada con alojamientos, experiencias y ritmo detallados.</p>
+              </div>
+              <div class="pstep">
+                <div class="pnum">03</div>
+                <h4>Ajuste y confirmación</h4>
+                <p>Refinamos cada detalle hasta que el recorrido refleja exactamente lo que se busca.</p>
+              </div>
+              <div class="pstep">
+                <div class="pnum">04</div>
+                <h4>El viaje</h4>
+                <p>Asistencia continua en destino. La logística permanece invisible. Solo fluye la experiencia.</p>
+              </div>
+            </div>
+            <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+              <a href="#contact" class="btn btn-solid">Diseñar mi viaje</a>
+              <a href="#contact" class="btn btn-ghost-dark">Consultar</a>
+            </div>
           </div>
-          <div class="map-box"
-            style="min-height:420px;background:var(--cream);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:1rem;">
-            <span
-              style="font-family:'Cormorant Garamond',serif;font-size:5rem;font-weight:300;color:var(--stone);">日本</span>
+          <div style="min-height:420px;background:var(--cream);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:1.5rem;padding:3rem;">
+            <span style="font-family:'Cormorant Garamond',serif;font-size:5rem;font-weight:300;color:var(--stone);">日本</span>
             <span class="lbl">Su mapa, a medida</span>
+            <p style="color:var(--ash);text-align:center;max-width:280px;font-size:0.82rem;letter-spacing:0.05em;line-height:1.7;">Ciudades · Alpes · Interior rural · Costa · Japón espiritual</p>
           </div>
         </div>
       </div>
@@ -2252,41 +2526,148 @@
       </div>
     </section>
 
-    <!-- PRICING -->
-    <section id="pricing" class="sec pricing-sec">
-      <div class="sec-inner">
-        <div class="sec-head">
-          <span class="lbl">Temporadas</span>
-          <h2 style="color:#1c1a17 !important;">Cada estación,<br>otra Japón</h2>
-          <p style="color:#8a8279 !important;">La planificación precisa determina si la experiencia es aproximada o
-            auténtica.</p>
+    <!-- PRICING / CADA ESTACIÓN -->
+    <section id=”pricing” class=”sec pricing-sec”>
+      <div class=”sec-inner”>
+        <div class=”sec-head”>
+          <span class=”lbl”>Calendario de salidas</span>
+          <h2 style=”color:#1c1a17 !important;”>Cada estación,<br>otro Japón</h2>
+          <p style=”color:#8a8279 !important;”>La planificación precisa determina si la experiencia es aproximada o auténtica.</p>
         </div>
-        <div class="price-grid">
-          <div class="pcard">
-            <span class="lbl">Primavera</span>
-            <div class="pseason">Marzo — Mayo</div>
-            <div class="prange">Sin precio publicado por ahora</div>
-            <p>Hanami y floración de cerezos. La temporada más expresiva. Requiere planificación de 6 meses.</p>
-            <div class="avail"><span class="adot amber"></span><span class="lbl">Primera salida: Primavera 2027</span>
+        <div class=”seasons-grid”>
+
+          <!-- VERANO -->
+          <div class=”season-block”>
+            <div class=”season-header”>
+              <span class=”lbl season-lbl”>Verano</span>
+              <span class=”season-desc”>Junio — Agosto</span>
+            </div>
+            <div class=”trip-list”>
+              <div class=”trip-card trip-soldout”>
+                <div class=”trip-info”>
+                  <div class=”trip-name”>Japón por Primera Vez</div>
+                  <div class=”trip-dates”>10 al 20 de julio 2026</div>
+                  <div class=”trip-price”>$XXXX / persona</div>
+                </div>
+                <div class=”trip-action”>
+                  <span class=”trip-badge badge-soldout”>AGOTADO</span>
+                </div>
+              </div>
+              <div class=”trip-card”>
+                <div class=”trip-info”>
+                  <div class=”trip-name”>Hiking Signature Journey</div>
+                  <div class=”trip-dates”>julio / agosto 2027</div>
+                  <div class=”trip-price”>$XXXX / persona</div>
+                </div>
+                <div class=”trip-action”>
+                  <a href=”#contact” class=”btn btn-ghost-dark”>+ info</a>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="pcard feat">
-            <span class="lbl">Otoño</span>
-            <div class="pseason">Oct — Noviembre</div>
-            <div class="prange">Grupos de 10–12 personas</div>
-            <p>Momijigari: el follaje rojizo transforma templos y montañas. Clima ideal para caminar.</p>
-            <div class="avail"><span class="adot green"></span><span class="lbl">Una salida por estación</span></div>
+
+          <!-- OTOÑO -->
+          <div class=”season-block”>
+            <div class=”season-header”>
+              <span class=”lbl season-lbl”>Otoño</span>
+              <span class=”season-desc”>Septiembre — Noviembre</span>
+            </div>
+            <div class=”trip-list”>
+              <div class=”trip-card”>
+                <div class=”trip-info”>
+                  <div class=”trip-name”>Golf Signature Journey</div>
+                  <div class=”trip-dates”>18 al 28 de septiembre 2026</div>
+                  <div class=”trip-price”>$XXXX / persona</div>
+                </div>
+                <div class=”trip-action”>
+                  <a href=”#contact” class=”btn btn-ghost-dark”>+ info</a>
+                </div>
+              </div>
+              <div class=”trip-card”>
+                <div class=”trip-info”>
+                  <div class=”trip-name”>Japón por Primera Vez</div>
+                  <div class=”trip-dates”>19 al 29 de noviembre 2026</div>
+                  <div class=”trip-price”>$XXXX / persona</div>
+                </div>
+                <div class=”trip-action”>
+                  <a href=”#contact” class=”btn btn-ghost-dark”>+ info</a>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="pcard">
-            <span class="lbl">Invierno</span>
-            <div class="pseason">Dic — Febrero</div>
-            <div class="prange">Lanzamiento el mes que viene</div>
-            <p>Nieve sobre templos y onsen bajo el vapor invernal. Japón más íntimo y menos transitado.</p>
-            <div class="avail"><span class="adot green"></span><span class="lbl">Una salida por estación</span></div>
+
+          <!-- INVIERNO -->
+          <div class=”season-block”>
+            <div class=”season-header”>
+              <span class=”lbl season-lbl”>Invierno</span>
+              <span class=”season-desc”>Diciembre — Febrero</span>
+            </div>
+            <div class=”trip-list”>
+              <div class=”trip-card”>
+                <div class=”trip-info”>
+                  <div class=”trip-name”>Japón por Primera Vez</div>
+                  <div class=”trip-dates”>15 al 25 de enero 2027</div>
+                  <div class=”trip-price”>$XXXX / persona</div>
+                </div>
+                <div class=”trip-action”>
+                  <a href=”#contact” class=”btn btn-ghost-dark”>+ info</a>
+                </div>
+              </div>
+              <div class=”trip-card”>
+                <div class=”trip-info”>
+                  <div class=”trip-name”>Japón por Primera Vez + Ski (opcional)</div>
+                  <div class=”trip-dates”>15 al 30 de enero 2027</div>
+                  <div class=”trip-price”>$XXXX / persona</div>
+                </div>
+                <div class=”trip-action”>
+                  <a href=”#contact” class=”btn btn-ghost-dark”>+ info</a>
+                </div>
+              </div>
+            </div>
           </div>
+
+          <!-- PRIMAVERA -->
+          <div class=”season-block”>
+            <div class=”season-header”>
+              <span class=”lbl season-lbl”>Primavera</span>
+              <span class=”season-desc”>Marzo — Mayo</span>
+            </div>
+            <div class=”trip-list”>
+              <div class=”trip-card”>
+                <div class=”trip-info”>
+                  <div class=”trip-name”>Japón por Primera Vez</div>
+                  <div class=”trip-dates”>25 de marzo al 5 de abril 2027</div>
+                  <div class=”trip-price”>$XXXX / persona</div>
+                </div>
+                <div class=”trip-action”>
+                  <a href=”#contact” class=”btn btn-ghost-dark”>+ info</a>
+                </div>
+              </div>
+              <div class=”trip-card”>
+                <div class=”trip-info”>
+                  <div class=”trip-name”>Golf Signature Journey</div>
+                  <div class=”trip-dates”>mayo / junio 2027</div>
+                  <div class=”trip-price”>$XXXX / persona</div>
+                </div>
+                <div class=”trip-action”>
+                  <a href=”#contact” class=”btn btn-ghost-dark”>+ info</a>
+                </div>
+              </div>
+              <div class=”trip-card”>
+                <div class=”trip-info”>
+                  <div class=”trip-name”>Bike Signature Journey</div>
+                  <div class=”trip-dates”>mayo / junio 2027</div>
+                  <div class=”trip-price”>$XXXX / persona</div>
+                </div>
+                <div class=”trip-action”>
+                  <a href=”#contact” class=”btn btn-ghost-dark”>+ info</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
-        <p style="margin-top:1.5rem;font-size:0.72rem;color:var(--ash);">* Esta línea estacional funciona como
-          introducción para “Japón por primera vez”. El precio se definirá más adelante.</p>
+        <p style=”margin-top:2rem;font-size:0.72rem;color:var(--ash);”>* Los precios se confirmarán en las próximas semanas. Grupos reducidos de 8 personas.</p>
       </div>
     </section>
 
@@ -2500,10 +2881,13 @@
 
     window.addEventListener('load', function () {
       window._map1 = makeMap('map1', [
-        { name: 'Tokio', lat: 35.6762, lng: 139.6503, days: 'Dias 1-4' },
-        { name: 'Hakone', lat: 35.2327, lng: 139.1069, days: 'Dias 5-6' },
-        { name: 'Kyoto', lat: 35.0116, lng: 135.7681, days: 'Dias 7-10' },
-        { name: 'Kanazawa', lat: 36.5613, lng: 136.6562, days: 'Dias 11-12' }
+        { name: 'Tokyo', lat: 35.6762, lng: 139.6503, days: '4 días' },
+        { name: 'Fuji', lat: 35.3606, lng: 138.7274, days: '1 noche' },
+        { name: 'Kyoto', lat: 35.0116, lng: 135.7681, days: '3 días' },
+        { name: 'Kōya-san', lat: 34.2126, lng: 135.5868, days: '1 noche' },
+        { name: 'Himeji', lat: 34.8394, lng: 134.6939, days: 'media mañana' },
+        { name: 'Hiroshima', lat: 34.3853, lng: 132.4553, days: '1 día' },
+        { name: 'Osaka', lat: 34.6937, lng: 135.5023, days: 'cierre' }
       ]);
       window._map2 = makeMap('map2', [
         { name: 'Tokio', lat: 35.6762, lng: 139.6503, days: 'Dias 1-3' },
