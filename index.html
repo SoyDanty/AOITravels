@@ -2773,6 +2773,8 @@
       for (var i = 0; i < tdots.length; i++) {
         (function (d) { d.addEventListener('click', function () { goT(parseInt(d.dataset.t)); }); })(tdots[i]);
       }
+      var tTotal = document.querySelectorAll('.tslide').length;
+      setInterval(function () { goT((tCur + 1) % tTotal); }, 4000);
       if ('IntersectionObserver' in window) {
         var tsec = document.querySelector('.testi-sec');
         if (tsec) {
