@@ -10,8 +10,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Josefin+Sans:wght@200;300;400&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+
   <style>
     :root {
       --ink: #1c1a17;
@@ -711,7 +710,7 @@
     }
 
     .ipanel {
-      grid-template-columns: 1fr 1.4fr;
+      grid-template-columns: 1fr;
       gap: 4rem;
       align-items: start;
       width: 100%;
@@ -1979,7 +1978,7 @@
               <a href="#contact" class="btn btn-ghost-dark">Consultar esta salida</a>
             </div>
           </div>
-          <div class="map-box" id="map1" style="min-height:420px;"></div>
+
         </div>
 
         <div class="ipanel" id="ip2" style="display:none;">
@@ -2034,7 +2033,7 @@
               <a href="#contact" class="btn btn-ghost-dark">Diseñar una versión propia</a>
             </div>
           </div>
-          <div class="map-box" id="map2" style="min-height:420px;"></div>
+
         </div>
 
         <div class="ipanel" id="ip3" style="display:none;">
@@ -2087,7 +2086,7 @@
               <a href="/experiencias" class="btn btn-solid">Ver experiencias</a>
             </div>
           </div>
-          <div class="map-box" id="map3" style="min-height:420px;"></div>
+
         </div>
 
         <div class="ipanel" id="ip4" style="display:none;">
@@ -2394,9 +2393,6 @@
       for (var i = 0; i < tabs.length; i++) tabs[i].classList.remove('on');
       if (clickedBtn) clickedBtn.classList.add('on');
       setTimeout(function () {
-        if (targetId === 'ip1' && window._map1) window._map1.invalidateSize();
-        if (targetId === 'ip2' && window._map2) window._map2.invalidateSize();
-        if (targetId === 'ip3' && window._map3) window._map3.invalidateSize();
       }, 200);
     }
 
@@ -2471,50 +2467,9 @@
       }
     });
 
-    function makeMap(id, cities) {
-      var el = document.getElementById(id);
-      if (!el || typeof L === 'undefined') return null;
-      var m = L.map(id, { zoomControl: false, scrollWheelZoom: false, attributionControl: false });
-      L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', { subdomains: 'abcd', maxZoom: 19 }).addTo(m);
-      L.control.zoom({ position: 'bottomright' }).addTo(m);
-      var coords = [];
-      for (var i = 0; i < cities.length; i++) coords.push([cities[i].lat, cities[i].lng]);
-      L.polyline(coords, { color: '#1c1a17', weight: 1.5, opacity: 0.45, dashArray: '5,7' }).addTo(m);
-      for (var i = 0; i < cities.length; i++) {
-        (function (city, idx) {
-          var icon = L.divIcon({
-            className: '',
-            html: '<div style="width:11px;height:11px;border-radius:50%;background:#1c1a17;border:2px solid #b08a5e;box-shadow:0 0 0 4px rgba(28,26,23,0.1);"></div>',
-            iconSize: [11, 11], iconAnchor: [5, 5], popupAnchor: [0, -12]
-          });
-          var mk = L.marker([city.lat, city.lng], { icon: icon }).addTo(m);
-          mk.bindPopup('<div style="padding:5px 10px;font-family:sans-serif;font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:#f4efe6;white-space:nowrap;">' + city.name + ' - ' + city.days + '</div>',
-            { closeButton: false, autoClose: false, closeOnClick: false, offset: [0, -8] });
-          if (idx === 0) setTimeout(function () { mk.openPopup(); }, 600);
-          mk.on('click', function () { this.openPopup(); });
-        })(cities[i], i);
-      }
-      m.fitBounds(L.latLngBounds(coords), { padding: [40, 40] });
-      return m;
-    }
+
 
     window.addEventListener('load', function () {
-      window._map1 = makeMap('map1', [
-        { name: 'Tokio', lat: 35.6762, lng: 139.6503, days: 'Dias 1-4' },
-        { name: 'Hakone', lat: 35.2327, lng: 139.1069, days: 'Dias 5-6' },
-        { name: 'Kyoto', lat: 35.0116, lng: 135.7681, days: 'Dias 7-10' },
-        { name: 'Kanazawa', lat: 36.5613, lng: 136.6562, days: 'Dias 11-12' }
-      ]);
-      window._map2 = makeMap('map2', [
-        { name: 'Tokio', lat: 35.6762, lng: 139.6503, days: 'Dias 1-3' },
-        { name: 'Osaka', lat: 34.6937, lng: 135.5023, days: 'Dias 4-6' },
-        { name: 'Kyoto', lat: 35.0116, lng: 135.7681, days: 'Dias 7-10' }
-      ]);
-      window._map3 = makeMap('map3', [
-        { name: 'Koyasan', lat: 34.2126, lng: 135.5868, days: 'Dias 1-2' },
-        { name: 'Kumano Kodo', lat: 33.8547, lng: 136.0534, days: 'Dias 3-6' },
-        { name: 'Kyoto', lat: 35.0116, lng: 135.7681, days: 'Dias 7-9' }
-      ]);
     });
   </script>
 </body>
